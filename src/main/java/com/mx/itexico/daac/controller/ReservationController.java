@@ -22,6 +22,6 @@ public class ReservationController {
 
     @GetMapping
     public ResponseEntity<List<Reservation>> getReservation(){
-        return status(HttpStatus.OK).body(reservationService.getReservations());
+        return status(HttpStatus.OK).body(reservationService.findAllReservations());
     }
 }
