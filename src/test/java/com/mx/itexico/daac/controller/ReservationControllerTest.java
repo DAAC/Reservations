@@ -1,4 +1,4 @@
-package com.mx.itexico.daac;
+package com.mx.itexico.daac.controller;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,17 +15,18 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ReservationTest {
+public class ReservationControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    public void getAllReservations() throws Exception {
+    public void TestGetAllReservation() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/reservations")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andReturn();
     }
+
 
 }
